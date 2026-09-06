@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rizwan Ali | Computer Science Student</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ░░ LOADER ░░ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-count" id="loader-count">0</span>
+      <div class="loader-bar">
+        <div class="loader-fill" id="loader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ░░ NAV ░░ -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">
+      <span>R</span><span class="accent">.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link" data-label="Home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-label="About">About</a></li>
+      <li><a href="#skills" class="nav-link" data-label="Skills">Skills</a></li>
+      <li><a href="#work" class="nav-link" data-label="Projects">Projects</a></li>
+      <li><a href="#contact" class="nav-link" data-label="Contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#hero" class="mob-link">Home</a></li>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#work" class="mob-link">Projects</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting reveal-up" data-delay="0">Hello, I'm</p>
+      <h1 class="hero-name">
+        <span class="reveal-up" data-delay="100">Rizwan</span>
+        <em class="reveal-up italic-accent" data-delay="200">Ali</em>
+      </h1>
+      <p class="hero-title reveal-up" data-delay="300">
+        <span class="typed-text" id="typed-text"></span><span class="typed-cursor">|</span>
+      </p>
+      <p class="hero-desc reveal-up" data-delay="400">
+        Computer Science student in Pakistan focused on<br />
+        web development, cybersecurity, networking, and Linux.
+      </p>
+      <div class="hero-cta reveal-up" data-delay="500">
+        <a href="#work" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">01</span>
+        <span class="label-text">About Me</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-img-wrap">
+            <div class="about-circle-frame">
+              <div class="about-circle-glow"></div>
+              <div class="about-circle-ring"></div>
+              <div class="about-img-box">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80"
+                  alt="Developer profile picture" class="about-picture" loading="lazy" />
+                <div class="about-img-overlay"></div>
+              </div>
+            </div>
+            <div class="about-badge">
+              <span class="badge-num">2nd</span>
+              <span class="badge-label">Year<br />CS Student</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <h2 class="section-title">
+            Building skills in<br /><em>web, security, and systems</em>
+          </h2>
+          <p>
+            I am a Computer Science undergraduate at FUUAST, Pakistan, with a strong interest in
+            web development, cyber security, networking, and Linux. I enjoy turning ideas into
+            practical digital solutions and expanding my technical knowledge through hands-on work.
+          </p>
+          <p>
+            My skill set includes HTML5, CSS3, JavaScript, and Python, and I have experience building
+            web projects while strengthening my fundamentals in Linux, ethical hacking, and networking.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-target="2">0</span>
+              <span class="stat-label">Years in CS</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="5">0</span>
+              <span class="stat-label">Web Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="8">0</span>
+              <span class="stat-label">Core Skills</span>
+            </div>
+          </div>
+          <a href="rizwan-ali-cv.txt" class="btn btn-primary" download>Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ SKILLS ░░ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">02</span>
+        <span class="label-text">Skills &amp; Tools</span>
+      </div>
+      <h2 class="section-title reveal-up">What I work with</h2>
+
+      <div class="skills-slider-wrapper">
+        <div class="skills-slider" id="skills-slider">
+          <article class="skill-card skill-card--slider reveal-up is-active" data-delay="0"
+            style="--skill-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80');">
+            <div class="skill-visual">
+              <div class="skill-image"></div>
+            </div>
+            <div class="skill-card-content">
+              <span class="skill-tag">Core</span>
+              <h3>Web Development</h3>
+              <p>HTML5 · CSS3 · JavaScript · Responsive Design</p>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="skill-card skill-card--slider reveal-up" data-delay="100"
+            style="--skill-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80');">
+            <div class="skill-visual">
+              <div class="skill-image"></div>
+            </div>
+            <div class="skill-card-content">
+              <span class="skill-tag">Security</span>
+              <h3>Cyber Security</h3>
+              <p>Ethical Hacking · Linux · Networking Fundamentals</p>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="84"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="skill-card skill-card--slider reveal-up" data-delay="200"
+            style="--skill-image: url('https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80');">
+            <div class="skill-visual">
+              <div class="skill-image"></div>
+            </div>
+            <div class="skill-card-content">
+              <span class="skill-tag">System</span>
+              <h3>Linux &amp; Tools</h3>
+              <p>Kali Linux · VirtualBox · Git · GitHub · CLI</p>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="86"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="skill-card skill-card--slider reveal-up" data-delay="300"
+            style="--skill-image: url('https://images.unsplash.com/photo-1526378722484-bd91ca387de2?auto=format&fit=crop&w=900&q=80');">
+            <div class="skill-visual">
+              <div class="skill-image"></div>
+            </div>
+            <div class="skill-card-content">
+              <span class="skill-tag">Coding</span>
+              <h3>Python</h3>
+              <p>Automation · Problem Solving · Scripting</p>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="skill-card skill-card--slider reveal-up" data-delay="400"
+            style="--skill-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80');">
+            <div class="skill-visual">
+              <div class="skill-image"></div>
+            </div>
+            <div class="skill-card-content">
+              <span class="skill-tag">Productivity</span>
+              <h3>MS Office</h3>
+              <p>Word · Excel · PowerPoint · Access</p>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="skill-card skill-card--slider reveal-up" data-delay="500"
+            style="--skill-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80');">
+            <div class="skill-visual">
+              <div class="skill-image"></div>
+            </div>
+            <div class="skill-card-content">
+              <span class="skill-tag">People</span>
+              <h3>Soft Skills</h3>
+              <p>Problem Solving · Communication · Teamwork · Leadership</p>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="88"></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="skills-slider-controls">
+          <button class="skills-arrow skills-arrow--left" id="skills-prev" aria-label="Previous skill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+          <button class="skills-arrow skills-arrow--right" id="skills-next" aria-label="Next skill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="tech-marquee">
+        <div class="marquee-track">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>Linux</span><span>Kali
+            Linux</span><span>Networking</span><span>Git</span><span>GitHub</span><span>VS
+            Code</span><span>VirtualBox</span><span>MS Office</span>
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>Linux</span><span>Kali
+            Linux</span><span>Networking</span><span>Git</span><span>GitHub</span><span>VS
+            Code</span><span>VirtualBox</span><span>MS Office</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ WORK ░░ -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">03</span>
+        <span class="label-text">Selected Work</span>
+      </div>
+      <h2 class="section-title reveal-up">Learning Projects</h2>
+
+      <div class="projects-scroller">
+        <button class="project-scroll-btn project-scroll-btn--left" id="project-scroll-left"
+          aria-label="Scroll projects left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <article class="project-card reveal-up" data-delay="0">
+            <div class="project-img-box">
+              <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=80"
+                alt="Todo List Application Preview" class="project-picture" loading="lazy" />
+              <div class="project-badge">
+                <span class="pulse-dot"></span> Live Demo
+              </div>
+              <div class="project-overlay">
+                <a href="https://todo-application-rizwanali.netlify.app" target="_blank" rel="noopener noreferrer"
+                  class="project-link" aria-label="View Todo List Project">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                </a>
+                <span class="project-overlay-text">View Live App</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Productivity</span></div>
+              <h3><a href="https://todo-application-rizwanali.netlify.app" target="_blank" rel="noopener noreferrer" class="project-title-link">Todo List</a></h3>
+              <p>A responsive task management application built to organize daily tasks, manage priorities, and track productivity with an interactive interface.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-delay="150">
+            <div class="project-img-box">
+              <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80"
+                alt="Gaming Store Project Preview" class="project-picture" loading="lazy" />
+              <div class="project-badge">
+                <span class="pulse-dot"></span> Live Demo
+              </div>
+              <div class="project-overlay">
+                <a href="https://admirable-profiterole-a5dc74.netlify.app/" target="_blank" rel="noopener noreferrer"
+                  class="project-link" aria-label="View Gaming Store Project">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                </a>
+                <span class="project-overlay-text">View Live Store</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Gaming</span></div>
+              <h3><a href="https://admirable-profiterole-a5dc74.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-title-link">Gaming Store</a></h3>
+              <p>An immersive gaming store interface showcasing popular game titles, modern card layouts, dynamic interactions, and responsive aesthetics.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <button class="project-scroll-btn project-scroll-btn--right" id="project-scroll-right"
+          aria-label="Scroll projects right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ TESTIMONIALS ░░ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">04</span>
+        <span class="label-text">Focus Areas</span>
+      </div>
+      <div class="testimonial-track" id="testimonial-track">
+        <div class="testimonial-card active">
+          <div class="quote-icon">"</div>
+          <p>"I am actively building practical skills in web design and front-end development with a focus on modern,
+            responsive interfaces."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg,#6366f1,#a78bfa)">W</div>
+            <div>
+              <strong>Web Development</strong>
+              <span>HTML · CSS · JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <p>"Cyber security and networking are major areas of interest, and I am developing a strong foundation in
+            Linux and ethical hacking fundamentals."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg,#059669,#34d399)">C</div>
+            <div>
+              <strong>Cyber Security</strong>
+              <span>Linux · Networking · Ethics</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <p>"I combine technical learning with problem solving, communication, and teamwork to grow as a dependable
+            computer science student."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg,#dc2626,#f59e0b)">S</div>
+            <div>
+              <strong>Soft Skills</strong>
+              <span>Critical Thinking · Leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonial-dots">
+        <button class="dot active" aria-label="Slide 1"></button>
+        <button class="dot" aria-label="Slide 2"></button>
+        <button class="dot" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">05</span>
+        <span class="label-text">Get In Touch</span>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <h2 class="section-title">Let's build<br /><em>something useful</em></h2>
+          <p>I’m open to learning opportunities, web projects, collaborations, and creative challenges in technology.
+          </p>
+          <div class="contact-info">
+            <a href="mailto:soloplayer1v1@gmail.com" class="contact-item">
+              <span class="contact-icon">✉</span>
+              soloplayer1v1@gmail.com
+            </a>
+            <a href="tel:+923122207159" class="contact-item">
+              <span class="contact-icon">☎</span>
+              +92 312 2207159
+            </a>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              Pakistan
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" rel="noreferrer" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="social-link"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noreferrer" class="social-link" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.629L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder=" " required autocomplete="name" />
+              <label for="name">Your Name</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder=" " required autocomplete="email" />
+              <label for="email">Email Address</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder=" " required />
+              <label for="subject">Subject</label>
+              <span class="form-line"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+              <label for="message">Message</label>
+              <span class="form-line"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span class="btn-text">Send Message</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+            <p class="form-success" id="form-success">✓ Message sent! I'll get back to you soon.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo" aria-label="Back to top">R<span class="accent">.</span></a>
+        <p class="footer-copy">© 2025 Rizwan Ali. Built for learning &amp; growth.</p>
+        <button class="scroll-top" id="scroll-top" aria-label="Back to top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
